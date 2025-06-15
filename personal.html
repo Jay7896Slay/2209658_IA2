@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <title>2209658 Portfolio</title>
+  <style>
+    :root {
+
+  /**
+   * colors
+   */
+
+  --chinese-violet_30: hsla(304, 14%, 46%, 0.3);
+  --chinese-violet: hsl(304, 14%, 46%);
+  --sonic-silver: #93725c;
+  --old-rose_30: #BB8C68;
+  --ghost-white: hsl(233, 33%, 95%);
+  --light-pink: hsl(357, 93%, 84%);
+  --light-gray: #F6F3E2;
+  --old-rose: #c78a87;
+  --seashell: #DED8BB;
+  --charcoal: #590a0e;
+  --white: #FEFBF8;
+
+  /**
+   * typography
+   */
+
+  --ff-philosopher: 'Philosopher', sans-serif;
+  --ff-poppins: 'Poppins', sans-serif;
+
+  --fs-1: 4rem;
+  --fs-2: 3.2rem;
+  --fs-3: 2.7rem;
+  --fs-4: 2.4rem;
+  --fs-5: 2.2rem;
+  --fs-6: 2rem;
+  --fs-7: 1.8rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 80px;
+
+  /**
+   * shadow
+   */
+
+  --shadow-1: 4px 6px 10px hsla(231, 94%, 7%, 0.06);
+  --shadow-2: 2px 0 15px 5px hsla(231, 94%, 7%, 0.06);
+  --shadow-3: 3px 3px var(--chinese-violet);
+  --shadow-4: 5px 5px var(--chinese-violet);
+
+  /**
+   * radius
+   */
+
+  --radius-5: 5px;
+  --radius-10: 10px;
+
+  /**
+   * clip path
+   */
+
+  --polygon: polygon(100% 29%,100% 100%,19% 99%,0 56%);
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Poppins';
+}
+
+body {
+  min-height: 100vh;
+}
+
+/*-----------------------------------*\
+  #NAVBAR
+\*-----------------------------------*/
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+nav ul a {
+  color: #968146;
+  opacity: 0.6;
+  transition: 0.25s ease;
+}
+
+nav ul a:hover {
+  opacity: 1;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  opacity: 0.8;
+  transition: 0.25s ease;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+a span {
+  background: linear-gradient(to right, #D9C392, #968146);
+  background-clip: text;
+  color: transparent;
+}
+
+img,
+span,
+data,
+input,
+button,
+textarea,
+ion-icon { 
+  display: block; 
+}
+
+img { 
+  height: auto; 
+}
+
+ion-icon { 
+  pointer-events: none; 
+}
+
+html {
+  font-family: var(--ff-poppins);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--sonic-silver);
+  line-height: 1.8;
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.container { 
+  padding-inline: 15px; 
+}
+
+.section { 
+  padding-block: var(--section-padding); 
+}
+
+.section:nth-child(odd) { 
+  background-color: var(--seashell); 
+}
+
+.section-subtitle {
+  color: var(--old-rose);
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.h1,
+.h2,
+.h3,
+.tab-text {
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+
+.h1 { 
+  font-size: var(--fs-2); 
+}
+
+.h2 { 
+  font-size: var(--fs-3); 
+}
+
+.h3 { 
+  font-size: var(--fs-5); 
+}
+
+.section-text { 
+  font-size: 1.2rem; 
+}
+
+.w-100 { 
+  width: 100%; 
+}
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+  content: "";
+  position: absolute;
+}
+
+.section-title { 
+  text-align: center; 
+}
+
+.grid-list {
+  display: grid;
+  gap: 25px;
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--light-gray);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+.hero {
+  padding-block-start: calc(var(--section-padding) + 60px);
+  text-align: center;
+}
+
+.hero .container {
+  display: grid;
+  gap: 60px;
+}
+
+.hero .hero-title { 
+  margin-block: 10px 25px; 
+}
+
+.hero-banner {
+  padding-inline-start: 30px;
+  padding-block-end: 30px;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.hero-banner .w-100 { 
+  border-radius: 10px 30px; 
+}
+
+.hero-banner::before {
+  top: 30px;
+  right: 20px;
+  bottom: 0;
+  left: 0;
+  background-color: #5D4251;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/*-----------------------------------*\
+  #CHAPTERS
+\*-----------------------------------*/
+
+.chapter-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.chapter-card {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius-5);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-2);
+}
+
+.chapter-card:is(:hover, :focus-within) {  transform: translateY(-10px); 
+}
+
+.chapter-card .card-title { 
+  margin-block-end: 15px; 
+}
+
+.chapter-card span {
+  display: inline-block;
+  padding: 2px 9px;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #604C41;
+  border-radius: 5px;
+}
+
+.chapter-card h4 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4D6223;
+}
+
+.chapter-card p {
+  margin-bottom: 1rem;
+  color: #968146;
+}
+
+/*-----------------------------------*\
+  #AUTHOR
+\*-----------------------------------*/
+
+#author {
+  background-color: var(--seashell);
+}
+
+#author .container {
+  display: grid;
+  grid-template-columns: minmax(auto, 700px) 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+#author :is(.section-subtitle, .section-title) {
+  text-align: left;
+}
+
+.author-content {
+  background-color: var(--white);
+  padding: 30px;
+  width: auto;
+  min-width: 0;
+}
+
+.author-name {
+  font-size: var(--fs-6);
+  margin-block-end: 30px;
+}
+
+.author .section-text {
+  font-size: 17.5px;
+  word-break: break-word;
+  overflow-wrap: break-word; 
+}
+
+/*-----------------------------------*\
+  #REVIEW SECTION
+\*-----------------------------------*/
+
+.review {
+  background-color: #DED8BB;
+  padding: 80px 0;
+}
+
+.review-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-container h4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #87A766;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.review-container i {
+  font-size: 6rem;
+  color: #87A766 !important; 
+  line-height: 1;
+  flex-shrink: 0;
+  margin-right: -10px;
+}
+
+.review-content {
+  flex: 1;
+}
+
+.review-content p {
+  color: #F9F3E9;
+  font-size: 1.75rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-weight: 700;
+}
+
+/*-----------------------------------*\
+  #FOOTER SECTION
+\*-----------------------------------*/
+
+footer {
+  background-color: #E9E9E9;
+  padding-top: 25px;
+  height: 100%;
+  text-align: center;
+}
+
+footer li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+.footer-icons a {
+  background: #FFF;
+  color: #A9C28C;
+  padding: 15px;
+  border-radius: 100px;
+  display: flex;
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.footer-icons a:hover {
+  opacity: 0.6;
+}
+
+.footer-menu a {
+  color: #87A766;
+  transition: 0.3s ease;
+  opacity: 0.8;
+}
+
+.footer-menu a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  background-color: #A9C28C;
+  color: #FBFBFC;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+  font-weight: 575;
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for large than 575px screen
+ */
+
+@media (min-width: 575px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 4.5rem;
+    --fs-3: 3.5rem;
+    --fs-5: 2.5rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  .header,
+  .navbar {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .section-text { --fs-7: 2rem; }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .header { top: 30px; }
+
+  .header.active { max-width: unset; }
+
+  .navbar {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+
+  /**
+   * PREVIEW
+   */
+
+  .tab-card.active { height: 50vh; }
+
+
+
+  /**
+   * ACHIEVEMENT
+   */
+
+  .achievement-card { display: flex; }
+
+  .achievement-card > * { width: 50%; }
+
+  .achievement-card .card-content { padding-block: 30px; }
+
+  .achievement-card .card-title { margin-block-end: 20px; }
+
+
+
+  /**
+   * CONTACT
+   */
+
+  .social-list-title { --fs-6: 2.2rem; }
+
+  .social-link {
+    font-size: 25px;
+    padding: 8px;
+  }
+
+}
+
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 4.8rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  .header,
+  .navbar { max-width: 720px; }
+
+  .grid-list { grid-template-columns: 1fr 1fr; }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero {
+    padding-block-start: calc(var(--section-padding) + 100px);
+    text-align: left;
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+  }
+
+  .hero .section-subtitle { text-align: left; }
+
+
+
+  /**
+   * BENEFITS
+   */
+
+  .benefits :is(.section-title, .section-text) { text-align: left; }
+
+  .benefits-content { grid-column: 1 / 3; }
+
+
+
+  /**
+   * CHAPTERS, PRICING
+   */
+
+  :is(.chapters, .pricing) .grid-list li:last-child {
+    grid-column: 1 / 3;
+    max-width: calc(50% - 12.5px);
+    width: 100%;
+    margin-inline: auto;
+  }
+
+
+
+  /**
+   * PREVIEW
+   */
+
+  .tab-card.active { height: 70vh; }
+
+
+
+  /**
+   * AUTHOR
+   */
+
+  .author .h2 { --fs-3: 4.2rem; }
+
+
+
+  /**
+   * ACHIEVEMENT
+   */
+
+  .achievement-card { flex-direction: column; }
+
+  .achievement-card > * { width: 100%; }
+
+
+
+  /**
+   * CONTACT
+   */
+
+  .contact .wrapper { grid-template-columns: 1fr 1fr; }
+
+}
+
+/**
+ * responsive for large than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 5.4rem;
+    --fs-3: 4rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  .header,
+  .navbar { max-width: 960px; }
+
+  .grid-list { grid-template-columns: repeat(3, 1fr); }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .header .container { padding-inline: 20px 30px; }
+
+  .nav-toggle-btn { display: none; }
+
+  .navbar,
+  .navbar.active { all: unset; }
+
+  .navbar-list {
+    margin-block-end: 0;
+    display: flex;
+    gap: 30px;
+  }
+
+
+
+  /**
+   * BENEFITS
+   */
+
+  .benefits .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+
+  .benefits-content { max-width: 80%; }
+
+
+
+  /**
+   * CHAPTER, PRICING
+   */
+
+  :is(.chapters, .pricing) .grid-list li:last-child { all: unset; }
+
+
+
+  /**
+   * PREVIEW
+   */
+
+  .tab-list {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .tab-text {
+    text-orientation: upright;
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+  }
+
+  .tab-card {
+    height: 70vh;
+    max-width: 60px;
+  }
+
+  .tab-card.active { max-width: 650px; }
+
+
+
+  /**
+   * AUTHOR
+   */
+
+  .author .container {
+    grid-template-columns: 0.6fr 1fr;
+    gap: 0;
+  }
+
+  .author-content {
+    margin-block-start: 40px;
+    margin-inline-start: -30px;
+    padding-block-end: 70px;
+  }
+
+
+
+  /**
+   * ACHIEVEMENT
+   */
+
+  .achievement .grid-list { grid-template-columns: 1fr 1fr; }
+
+  .achievement-card { flex-direction: row; }
+
+  .achievement-card > * { width: 50%; }
+
+
+
+  /**
+   * CONTACT
+   */
+
+  .contact .wrapper { grid-template-columns: 1fr 0.5fr; }
+
+  .contact-form { padding: 40px; }
+
+}
+
+/**
+ * responsive for large than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 6rem;
+    --fs-3: 4.5rem;
+    --fs-4: 3rem;
+    --fs-5: 3rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  .header,
+  .navbar { max-width: 1140px; }
+
+
+
+  /**
+   * PREVIEW
+   */
+
+  .tab-card { max-width: 75px; }
+
+  .tab-card.active { max-width: 750px; }
+
+
+
+  /**
+   * AUTHOR
+   */
+
+  .author-content { padding: 85px 60px 115px; }
+  
+}
+  </style>
+</head>
+  
+<body>
+<!--   navbar -->
+  <nav>
+    <a href="#" class="logo"><span>2209658</span></a>
+    
+    <ul class="links">
+      <a href="index.html">Home</a>
+      <a href="personality.html">About Me</a>
+      <a href="professional.html">My Portfolio</a>
+      <a href="personal.html">Personal Development</a>
+    </ul>
+  </nav>
+  
+<!--   book review section -->
+  <section class="section hero" id="home" aria-label="home">
+        <div class="container">
+          <div class="hero-content">
+
+            <p class="section-subtitle">Novel by Chris Widener and Jim Rohn</p>
+
+            <h1 class="h1 hero-title">Twelve Pillars: A Novel</h1>
+
+            <p class="section-text">
+              Who would guess that when Michael Jones' car broke down on the side of the road that it would be the beginning of a life-changing relationship? Walking to the nearest house, Michael stumbles across a plantation style mansion on an estate named "Twelve Pillars". Charlie, the maintenance man, helps Michael get back on the road again and also strikes up a relationship with him - and along the way teaches Michael the secrets of success - the Twelve Pillars of Success - that have made the owner of the house, Mr. Davis, a wealthy and successful man. This new novel by Jim Rohn and Chris Widener will inspire you to take your life to the next level and beyond. It will challenge and encourage you to become the best that you can be!
+            </p>
+          </div>
+
+          <div class="hero-banner has-before">
+            <img src="/Assets/12 Pillars.jpg" width="431" height="596" alt="Twelve Pillars by Jim Rohn and Chris Widener" class="w-100">
+          </div>
+        </div>
+      </section>
+  
+<!--   chapter summary section -->
+  <section class="section chapters" id="chapters">
+        <div class="container">
+
+          <p class="section-subtitle">Chapters</p>
+
+          <h2 class="h2 section-title has-underline">
+            Chapters Read
+            <span class="span has-before"></span>
+          </h2>
+
+          <div class="chapter-grid">
+            <div class="chapter-card">
+              <span><i class='bxr bx-trophy'></i> </span>
+              <h4>Chapter 04</h4>
+              <p>In Chapter 4, "Achieve Your Goals", we find Michael meeting Charlie at Mack's Diner, a small, unpretentious diner. It has been four weeks since the last meeting at Mack's Diner, and Michael called Charlie to reconnect and to find out more about Mr. Davis's "Pillars of Success." Michael remembers Charlie walking slow, a clear and subtle reference to his health being compromised. Michael quickly ascends into Charlie's progress since the last time they connected which is his use of the goal setting success of the personal goal he established. Michael quite proudly reports that he accomplished the sales goal he established for himself and he credits the first steps he took in Mr. Davis's pillars that Charlie shared with him. Charlie congratulates him and stresses that, "the major reason for setting a goal is for what it makes of you to accomplish it". This just drives home the idea that working toward and accomplishing a goal changes the person you are leaving the person more capable of successfully navigating their life journey. The chapter demonstrates the practical application of the entire goal setting process which Michael realized is a  proverbial life long journey toward development and change, and a vehicle for personal growth and success, and that supposition has now further inspired him to learn more about the balance of the other pillars.
+</p>
+            </div>
+            
+            <div class="chapter-card">
+              <span><i class='bxr bx-hourglass'></i> </span>
+              <h4>Chapter 05</h4>
+              <p>Chapter 5, "The Appropriate Application of Time," opens by having Michael phone Charlie because his car registration expired, leaving him frustrated because he could not manage his time better, leading to waking up and trying to take care of his car registration but being out of time. Michael explains to Charlie that he is tired of running out of time and the tasks he could never finish. Charlie responds to Michael's reference to being out of time with introducing him to the "Pillar of Time". Charlie explains to Michael that time is valuable because it is not something you can regain. Charlie states time is precious. Everyone receives the same amount of time in the world everyday,  between 24 hours a day. Charlie explains the problem, is not again time, it is managing oneself in time. Charlie encourages Michael to plan his days out, like any business meeting or appointment he treats them, and even the business appointments are separated form the time he gives himself to complete personal development, personal exercise, etc. For example, he needs to treat his planning with the same importance as his business meetings and appointments. Planning includes doing the planning of his day and week as it is important that Michael understand that all he is doing when he uses his moments in time appropriately is contributing the success and future he is looking for and tying it in with the intended activity.</p>
+            </div>
+            
+            <div class="chapter-card">
+              <span><i class='bxr bx-smile'></i> </span>
+              <h4>Chapter 06</h4>
+              <p>Chapter 6 is titled "Surround Yourself With the Best People". It starts with Michael visiting Charlie at Twelve Pillars three weeks after they met at a diner. Michael arrived to find Charlie outside at the pool, manually cleaning it. Michael talked about achieving something else - he sold his older vehicle and bought a new one. This was what he intended to reach for when he had car issues, and he was proud of this achievement and it strengthened his belief in the Pillars of Success. Then Charlie told him the second principle, "Never join an easy crowd; you'll never grow. Go where the expectations are high, and the demands to perform". Charlie had highlighted the significance of surrounding ourselves with people who expect us to grow, raise our standards, and perform better. Charlie told him everything about a person's current situation is the result of what they were associated with in the past or what they did. He encouraged Michael to think about changing his associations if he wanted different results in his life and career. Charlie told Michael it is hard to leave people behind, but if you think of it as a journey in life, you wouldn't want to have unproductive people on your journey, like going on a good trip with really bad companions. This conversation reinforced that a person can choose their associates, they are not locked into them. And that their choices and actions based on their associations have consequences in their lives.</p>
+            </div>
+            
+            <div class="chapter-card">
+              <span><i class='bxr bx-education'></i></span>
+              <h4>Chapter 07</h4>
+              <p>Chapter 7 - "Be a Life-Long Learner" explains the importance of on-going personal growth, which Michael realizes when he contacts Charlie to tell him the good news that he has secured multiple new sales accounts. Michael explains to Charlie that he credits this success to the implementation of Charlie's ideas from previous talk. As they were speaking, Charlie also introduces the idea of being a life-long learner, and provides the perspective that "formal education will make you a living; self-education will make you a fortune". This pillar indicates that true success is not only about what you earn, but also about how you continue to learn and acquire knowledge and skills beyond formal schooling. Characteristically Charlie advises Michael to commit at least one hour a day to reading and studying, particularly in the areas relating specifically to his sales profession. Charlie explains that a small, consistent effort in self-education over time, long term, either by reading a book a week or the articles and sections in provided professional reading materials, adds up to significant personal and professional growth over time. The chapter ends with Michael quite energized by the concept to turn his daily habits into a habit of life-long learning and self-education, recognizing that his learning is ongoing and part of being ultimately successful.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+<!--   author(s) section -->
+  <section class="section author" id="author">
+        <div class="container">
+
+          <figure class="author-banner img-holder" style="--width: 700; --height: 720;">
+            <img src="/Assets/Chris Widener.jpeg" width="700" height="720" loading="lazy" alt="Chris Widener" class="img-cover">
+          </figure>
+          <div class="author-content">
+
+            <p class="section-subtitle">The Authors</p>
+
+            <h2 class="h2 section-title">Chris Widener</h2>
+
+            <p class="author-name">American Author and Motivational Speaker</p>
+
+            <div class="section-text">
+              Chris is the author of twenty books with three million copies in print in 13 languages and over 450 articles on success, leadership, sales and motivation. His best-selling books include The Angel Inside (which has also been optioned as a movie), The Art of Influence, The Leadership Rules, Live the Life You Have Always Dreamed Of, Twelve Pillars, and the sequel to Twelve Pillars, Above All Else. Chris has also produced over 80 CDs and DVDs on a wide range of topics. Chris was hand selected by two of the legends of the speaking world to work with them and he now carries on their legacy.
+            </div>
+
+          </div>
+        </div>
+      </section>
+  
+  <section class="section author" id="author">
+        <div class="container">
+
+          <figure class="author-banner img-holder" style="--width: 700; --height: 720;">
+            <img src="/Assets/Jim Rohn.jpg" width="700" height="720" loading="lazy" alt="Jim Rohn" class="img-cover">
+          </figure>
+
+          <div class="author-content">
+
+            <p class="section-subtitle">The Authors</p>
+
+            <h2 class="h2 section-title">Jim Rohn</h2>
+
+            <p class="author-name">American  Entrepreneur, Author, and Motivational Speaker</p>
+
+            <div class="section-text">
+              Born to an Idaho farming family in the mid-1900s, Jim was ingrained with a work ethic that served him well throughout his life. At 25, he met his mentor Earl Shoaff. And over the next six years he made his first fortune, yet didn’t get into speaking until he moved to Beverly Hills, Calif., when a friend at the Rotary Club asked him to tell his success story, which Rohn titled “Idaho Farm Boy Makes It to Beverly Hills.” His speech went over so well that he received more invitations to share it, and better yet, they started paying him for it. In the beginning, he spoke in front of college and high-school classes and at service clubs, before moving on to seminars in 1963, which launched him into the personal-development business. From then on, he became a trailblazer in the self-help/personal-development industry, impacting the lives of millions through his life-changing material.
+            </div>
+          </div>
+        </div>
+      </section>
+  
+<!--   review section -->
+  <section class="review">
+    <div class="review-container">
+      <span><i class='bxr bxs-quote-right-alt'></i></span>
+      <h4>My Thoughts</h4>
+      <div class="review-content">
+        
+        <p> As Charlie says in Chapter 4, the most essential part of a goal is "what it makes of you to achieve it." It's about the personal capacity, capability, and discipline you developed in the pursuit. Intrinsically, our motivation is strong, and once you have a goal that you feel clear about, think about spending a block of time regularly visualizing yourself having achieved it. The mental rehearsal activates our subconscious to surface opportunities and means of making it happen, as happened with Michael's mind working on his sales goal.
+ <br><br>
+Chapter 5 describes the importance of using every minute in ways that relate to priorities and goals. Work out your most important tasks and do those first, and minimize habitual time-wasters (like going on social media or unessential meeting times, pulling out that remote for scrolling through unwanted TV).
+ <br><br>
+Additionally, Chapter 6 discusses active pursuits of relationships and environments where excellence is the standard. You can do this by joining professional associations, going to professional networking events, industry meetings, interest group functions, and finding mentors who have already done what you want to do. You should aspire to be a positive and high achiever, so you can maintain positive and high-achieving people around you. Just as you are positive, knowledgeable, and able to positively contribute to your relationships, it is permissible to be selective about “who you have in your circle.” Always remain open to learning from and opportunities to learn from everyone.
+<br><br>
+Chapter 7 recommended making an everyday habit of reading. Read books, articles with articles, and publications applicable to your profession, personal growth, finances, and interests. Choose the number of books and articles to read each month or year. Seek out people who have attained what you desire. Learn from their successes and failures, reflect on your fresh learning and how it relates to your life, and consistently think about these as they relate to your life. This is a way to cement your learning and to note your level of improvement.
+<br><br>
+In summary, if consistently adhered to, people can make progressive changes in their personal and professional lives and become closer to their potential and everlasting success.
+
+</p>
+      </div>
+      </div>
+  </section>
+  
+  <!--   footer section -->
+<footer>
+  <ul class="footer-icons">
+    <li><a href="https://www.instagram.com/flowjamaica/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    <li><a href="https://www.facebook.com/FlowJamaica/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <li><a href="https://x.com/FLOWJamaica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="https://www.linkedin.com/company/flow-caribbean" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="https://github.com/" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+  </ul>
+  
+  <ul class="footer-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="personality.html">About Me</a></li>
+    <li><a href="professional.html">My Portfolio</a></li>
+      <li><a href="personal.html">Personal Development</a></li>
+  </ul>
+  
+  <div class="footer-bottom">
+    <p>Copyright &copy; 2025 | Designed by Jada Johnson | All Rights Reserved</p>
+  </div>
+</footer>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

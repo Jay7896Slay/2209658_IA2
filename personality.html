@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <title>2209658 Portfolio</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* NAV SECTION */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+nav ul a {
+  color: #6F2F91;
+  opacity: 0.7;
+  transition: 0.25s ease;
+}
+
+nav ul a:hover {
+  opacity: 1;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  opacity: 0.8;
+  transition: 0.25s ease;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+a span {
+  background: linear-gradient(to right, #A68FC3, #582572);
+  background-clip: text;
+  color: transparent;
+}
+
+/* HERO SECTION */
+
+.banner {
+  min-height: 80vh;
+  background: url(/Assets/purple\ bg\ 2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding: 20rem 8rem;
+}
+
+.banner .content {
+  text-align: center;
+  background: #FCE6F4;
+  border-radius: 0.5rem;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  max-width: 50rem;
+}
+
+.banner .content h3 {
+  font-size: 2.5rem;
+  color: #FFA6C9;
+  text-transform: uppercase;
+}
+
+.banner .content p {
+  font-size: 1.25rem;
+  color: #B19CD9;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #FFA6C9;
+  color: #FFF;
+  border-radius: 0.5rem;
+  padding: 0.9rem 3rem;
+  font-size: 1.7rem;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+/* EMOTION SECTION */
+
+.section_text_id {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: #D6B8E6;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #B19CD9;
+}
+
+.section {
+  padding-top: 5vh;
+  padding-bottom: 20vh;
+  height: 96vh;
+  margin: 0 15rem;
+  min-height: fit-content;
+  box-sizing: border-box;
+}
+
+#about {
+    position: relative;
+    padding: 6rem 0;
+    text-align: center;
+    background-color: #F9F9F9;
+}
+
+.section_text_id {
+    font-size: 1.3rem;
+    color: #E9CCED;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #B19CD9;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.about-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.about-image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+.about-details-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 300px;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.details-container {
+    flex: 1;
+    min-width: 280px;
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.details-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: transparent;
+}
+
+.details-container h3 {
+    color: #B19CD9;
+    font-size: 1.75rem;
+    margin-bottom: 0.8rem;
+}
+
+.details-container p {
+    color: #E9CCED;
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+.details-container i {
+    color: #B19CD9;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .about-image-container {
+        max-width: 350px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-container {
+        width: 80%;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .about-content-wrapper {
+        padding: 0 1rem;
+    }
+
+    .about-image-container {
+        max-width: 280px;
+    }
+
+    .details-container {
+        padding: 1.5rem;
+        min-width: unset;
+        width: 90%;
+    }
+
+    .details-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .details-container p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .about-image-container {
+        max-width: 250px;
+    }
+}
+
+/* STRENGTH SECTION */
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #FCE6F4;
+}
+
+.details-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details-heading span {
+  color: #B19CD9;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.details-heading h3 {
+  font-size: 1.15rem;
+  color: #D6B8E6;
+  font-weight: 300;
+}
+
+.details-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.details-box {
+  width: 350px;
+  background-color: #fff;
+  border: 1px solid #ECE;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.details-box:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.details-img {
+  width: 100%;
+  height: auto;
+}
+
+.details-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.details-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #D6B8E6;
+  font-weight: 600;
+}
+
+.details-text span {
+  color: #B19CD9;
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* IDOL SECTION */
+
+.hero {
+  padding: 7rem 0;
+  background: url(/Assets/purple\ bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.hero-title {
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title p a {
+    color: #B19CD9;
+}
+
+.hero-title h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #B19CD9;
+  text-transform: uppercase;
+}
+
+.hero-content {
+  border-radius: 15px;
+  border: 1px solid #000;
+  box-shadow: 7px 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.hero-content:hover {
+  transform: scale(1.05);
+}
+
+.hero-content img {
+  object-fit: cover;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-text {
+  margin: 1rem 0;
+  padding: 5rem;
+}
+
+.hero-text a {
+  transition: 0.3s ease;
+}
+
+.hero-text a:hover {
+  opacity: 0.65;
+}
+
+.container {
+  max-width: 100vh;
+  margin: 0 auto;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  opacity: 0.8;
+  color: #5F489D;
+  text-align: center;
+}
+
+/* PERSONALITY SECTION */
+
+.wrapper {
+  padding: 6rem 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+  background: url(/Assets/purple\ bg\ 3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  vertical-align: middle;
+  border-radius: 50px;
+}
+
+.intro {
+  flex: 1;
+}
+
+.intro h1 {
+  color: #FFF;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 750;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro p {
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: #B19CD9;
+  border: 1px solid #D6B8E6;
+  border-radius: 0 75px;
+  box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.1);
+  padding: 3.5rem;
+  background-color: #fff;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  background-color: #E9E9E9;
+  padding-top: 25px;
+  height: 100%;
+  text-align: center;
+}
+
+footer li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+.footer-icons a {
+  background: #FFF;
+  color: #B19CD9;
+  padding: 15px;
+  border-radius: 100px;
+  display: flex;
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.footer-icons a:hover {
+  opacity: 0.6;
+}
+
+.footer-menu a {
+  color: #B19CD9;
+  transition: 0.3s ease;
+  opacity: 0.8;
+}
+
+.footer-menu a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  background-color: #B19CD9;
+  color: #FBFBFC;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+  font-weight: 575;
+}</style>
+</head>
+  
+<body>
+<!--   navbar -->
+  <nav>
+    <a href="#" class="logo"><span>2209658</span></a>
+    
+    <ul class="links">
+        <a href="index.html">Home</a>
+        <a href="personality.html">About Me</a>
+        <a href="professional.html">My Portfolio</a>
+        <a href="personal.html">Personal Development</a>
+      </ul>
+  </nav>
+  
+<!-- hero section -->
+  <section class="banner" id="banner">
+    <div class="content">
+      <h3>Welcome to My Autobiography</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolores beatae recusandae tempora itaque non deserunt, labore dolorem rerum veritatis quia a blanditiis voluptas repudiandae velit adipisci voluptates repellendus odio?</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+  
+<!--   emotion section -->
+  <section class="section" id="about">
+    <p class="section_text_id">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+
+        <div class="about-content-wrapper">
+            <div class="about-image-container">
+                <img src="/Assets/me.jpg" alt="Picture of Jada Johnson" class="about-image">
+            </div>
+      
+        <div class="about-details-container">
+          <div class="about-container">
+            <div class="details-container">
+              <i class='bxr bx-dumbbell'></i> 
+              
+              <h3>Strongest Trait</h3>
+              <p>Perseverance <br> The quality of sticking to something despite difficulties, setbacks, or discouragement</p>
+              </div>
+            
+            <div class="details-container">
+              <i class='bxr bx-book-alt'></i> 
+              
+              <h3>Dominant Emotion</h3>
+              <p>Curiosity </br> An eager desire to know; inquisitiveness</p>
+              </div>
+          </div>
+        </div>
+  </div>
+  </section>
+  
+<!-- daily life section -->
+  <article class="details">
+    <div class="details-heading">
+    <span>Impact on My Daily Life</span>
+    <h3>How these traits affect me on a daily basis</h3>
+  </div>
+    
+    <div class="details-con">
+      <div class="details-box">
+        <div class="details-img">
+          <img src="/Assets/math.jpg" alt="Mathematics">
+          </div>
+        
+        <div class="details-text">
+          <span>My Perservance</span>
+          <p>If I had a tough problem in one of my <strong>Mathematics</strong> courses, I was persistent. I'm not going to give up and quit; I will devote more time, research, practice, and work through many different approaches until I understand the concept. For example, I developed better problem-solving skills and better grades in difficult classes.</p>
+        </div>
+      </div>
+      
+      <div class="details-box">
+        <div class="details-img">
+          <img src="/Assets/bio.jpg" alt="Biology">
+          </div>
+        
+        <div class="details-text">
+          <span>My Curiousity</span>
+          <p>Curiosity inspires me to research areas that go beyond the class. By no means am I satisfied with just memorizing facts in <strong>Biology</strong>, because curiosity will send me down scientific journals or documentaries about genetic engineering or neuroscience and even social commentary, making my learning much deeper and more enjoyable. This proactive decision to act out of curiosity has often resulted in greater understanding and oftentimes enhanced my contributions during class discussions and group work.</p>
+        </div>
+      </div>
+      
+      <div class="details-box">
+        <div class="details-img">
+          <img src="/Assets/code.jpg" alt="Coding">
+          </div>
+        
+        <div class="details-text">
+          <span>My Hobbies</span>
+          <p>Concerning hobbies, my interest in <strong>Coding</strong> complements my studies, for example, in <strong>Computer Science</strong>. The other-worldly logical thinking and problem-solving skills I develop through one-off coding projects and tasks overlap into my school work, making me more effective and efficient at doing programming assignments and understanding and utilizing complex algorithms, which is valuable in all areas of studies.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+<!-- idol section -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <img src="/Assets/Nelson Mandela.jpg" alt="Nelson Mandela">
+        </div>
+      <div class="hero-text">
+        <div class="hero-title">
+          <h2>My Hero: Nelson Mandela</h2>
+          <p></p>
+        </div>
+        <p> <strong>Nelson Mandela</strong> is my hero. He has impacted me by living a life of dignity and purpose in the pursuit of justice, equality, and reconciliation - making incredible sacrifices along the way.
+          </br></br> 
+My favorite Nelson Mandela quote is: <em>"Education is the most powerful weapon which you can use to change the world."</em> This quote matters to me because it affirms that knowledge has the potential to be transformative, and it strengthens my belief that if we can learn and grow mentally, we can conquer the obstacles we face by contributing positively to the greater good of society. 
+</br></br> 
+I wanted to write about Nelson Mandela partly because of his incredible perseverance and persistence, and partly because he was able to forgive and unite a divided oppressed nation. His leadership showed a different type of leadership that had nothing to do with conquering a group of people, but everything to do with feeling compassion and pursuing a society where human dignity was a priority. He taught us that one individual can not only change history but also inspire millions of people around the world to be better.
+</br></br> 
+    You can learn more about Nelson Mandela at <a href="https://www.nelsonmandela.org/biography" target="_blank">Nelson Mandela Foundation</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- personality test section -->
+<section class="wrapper">
+  <div class="profile">
+    <img src="/Assets/results.png" alt="Keirsey	Temperament	Sorter Personality Test Results">
+  </div>
+  <article class="intro">
+    <h1>Keirsey	
+Temperament	Sorter Personality Test Results</h1>
+    <p>The Keirsey Temperament Sorter is a self-report personality assessment created by psychologist David Keirsey. It was introduced to the public in his 1978 book "Please Understand Me."
+<br><br>
+The questionnaire divides people into four temperaments, which Keirsey labeled Artisan, Guardian, Idealist, and Rational. Each of the four temperaments is then further sorted into four character types, leading to a total of 16 possible personality types in total.
+    <br><br>
+    Upon doing the test, I've recieved the result of the "Guardian". According to VeryWellMind, they are dependable, hard-working individuals who keep the wheels of society turning. They are concrete and cooperative, which means they follow the rules and respect authority.
+
+They are dedicated to maintaining law and order and believe in customs and traditions. According to the Keirsey Group, 40% to 45% of the world's population are Guardians.
+      <br><br>
+      This result reflects on who I am as an individual; I take pleasure in what I do and ensure that it follows the rules, as well as that it is completed on time. Furthermore, urging people to complete other assignments on time.
+    </p>
+  </article>
+</section>
+
+<!--   footer section -->
+<footer>
+  <ul class="footer-icons">
+    <li><a href="https://www.instagram.com/flowjamaica/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    <li><a href="https://www.facebook.com/FlowJamaica/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <li><a href="https://x.com/FLOWJamaica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="https://www.linkedin.com/company/flow-caribbean" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="https://github.com/" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+  </ul>
+  
+  <ul class="footer-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="personality.html">About Me</a></li>
+    <li><a href="professional.html">My Portfolio</a></li>
+      <li><a href="personal.html">Personal Development</a></li>
+  </ul>
+  
+  <div class="footer-bottom">
+    <p>Copyright &copy; 2025 | Designed by Jada Johnson | All Rights Reserved</p>
+  </div>
+</footer>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

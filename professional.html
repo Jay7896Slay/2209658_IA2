@@ -1,0 +1,948 @@
+<!-- Jada Johnson, 2209658, IA_1, CIT2011 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  
+  <style>
+    /* Custom Properties (CSS Variables) */
+:root {
+    --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+}
+
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* HTML and Body for Footer */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins'; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #7E1D22;
+}
+
+/* Navbar */
+nav {
+ position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+}
+
+nav ul a { 
+    color: #F5EEE6; 
+    opacity: 0.8;
+    transition: 0.25s ease;
+}
+
+nav ul a:hover { 
+    opacity: 1;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    opacity: 0.8;
+    transition: 0.25s ease;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+a span {
+    background: linear-gradient(to right, #ECDBC1, #FBFAF7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Main Content Section */
+
+section {
+    min-height: calc(100vh - 70px);
+    width: 100%;
+    padding: 3rem 5%;
+    position: relative; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    text-align: center;
+}
+
+/* About Section*/
+.about-section {
+    position: relative;
+    text-align: center;
+    color: #FFF;
+    padding: 20px;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    font-weight: bold;
+    color: #C79E9E;
+  opacity: 0.4;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.about-me-text {
+    position: relative;
+    font-size: 8vw;
+    font-weight: bold;
+    z-index: 2;
+    color: #FFF;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-text .highlight {
+    color: #FFEEE0;
+}
+
+/* Statement Container */
+
+.statements {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.statements-con {
+  row-gap: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.statement-title {
+  color: #FFEEE0;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  width: max-content;
+  padding: 2rem;
+  margin: .75rem auto 2rem;
+  text-transform: uppercase;
+}
+
+.statement-title span {
+  position: relative;
+  z-index: 5;
+}
+
+.statement-perfil {
+  position: relative;
+  margin-block: 2.5rem 4.5rem;
+}
+
+.statement-img {
+  width: 100%;
+}
+
+.statement-img img {
+    width: 35rem;
+}
+
+.stat-img {
+  position: relative;
+  border: 4px solid #C79E9E;
+  z-index: 1;
+  height: 100%;
+  border-radius: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statement-img .decor {
+  position: absolute;
+}
+
+.statement-img .decor.red-square {
+  width: 20px;
+  height: 20px;
+  background: #914144;
+  transform: rotate(45deg);
+  top: 10px;
+  right: 10px;
+}
+
+.statement-img .decor.black-lines {
+  bottom: 10px;
+  left: 10px;
+}
+
+.statement-img .decor.black-lines::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background: #FFEEE0;
+  transform: rotate(45deg);
+}
+
+.statement-img .decor.red-rect {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+  height: 10px;
+  background: #C79E9E;
+}
+
+.statement-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
+    padding: 5rem; 
+    min-width: 1200px;
+    margin: 0 auto; 
+    align-items: start;
+}
+
+.mission,
+.vision {
+  color: #914144;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+
+.mission-section,
+.vision-section {
+  background-color: #FFEEE0;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.mission-section:hover,
+.vision-section:hover {
+  cursor: default;
+  transform: translateY(-5px);
+}
+
+.mission-section h2,
+.vision-section h2 {
+    color: #914144;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.mission-section p,
+.vision-section p {
+    color: #A35759;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Main Title */
+.main-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.main-title h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.main-title h2 .bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 6.3rem;
+}
+
+/* Button */
+.btn-con {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-btn {
+  border-radius: 30px;
+  font-weight: 600;
+  position: relative;
+  border: 1.75px solid #C79E9E;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.main-btn .btn-text {
+  padding: 0.8rem;
+  color: #FFEEE0; 
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-btn .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    color: #C79E9E;
+}
+
+.main-btn::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease-out;
+    z-index: -1;
+    background-color: #A35759;
+    width: 100%; 
+    height: 100%; 
+}
+
+.main-btn:hover {
+  color: #A35759; 
+  transform: scale(1.05);
+}
+
+.main-btn:hover::before {
+    transform: translateX(0);
+}
+
+/* Professional Container */
+.professional-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+  gap: 2rem;
+  width: 100%; 
+  margin: 0 auto;
+  text-align: left;
+}
+
+.professional-container .right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.professional-container .right .pro-item {
+    border: 3px solid #C79E9E;
+    border-radius: 25px;
+    transition: all .3s ease;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: #A35759;
+}
+
+.professional-container .right .pro-item:hover {
+    cursor: default;
+    transform: translateY(-5px);
+}
+
+.professional-container .right .pro-item .pro-text {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.professional-container .right .pro-item .pro-text .large-text {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #FFEEE0;
+}
+
+.professional-container .right .pro-item .pro-text .small-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: #C79E9E;
+  line-height: 1.5;
+}
+
+.professional-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.professional-container .left {
+    padding-right: 0;
+    text-align: center;
+}
+
+.professional-container .left p {
+    text-align: center;
+  font-size: 1.2rem;
+    line-height: 2rem;
+    padding: 1rem 0;
+    color: #C79E9E;
+}
+
+.professional-container .left h4 {
+  text-align: center; 
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFEEE0;
+  margin-bottom: 1rem;
+}
+
+/* Insights Container */
+
+main {
+  margin-top: 1.4rem;
+  width: auto;
+  margin-bottom: 10rem;
+}
+
+.professional-insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.insight-card {
+  background-color: #F5EEE6;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05) rotate(-3deg) translateY(-10px);
+}
+
+.insight-card .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.insight-card.salary .icon {
+  background: #A35759;
+}
+
+.insight-card.education .icon {
+  background: #BF8586; 
+}
+
+.insight-card.education .details h1 {
+  font-size: 1.275rem;
+}
+
+.insight-card.employment .icon {
+  background: #7E1D22;
+}
+
+.insight-card .details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.insight-card .details h3 {
+  font-size: 0.9rem;
+  color: #914144;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.insight-card .details h1 {
+  font-size: 1.8rem;
+  color: #8E322F;
+  margin: 0;
+  font-weight: 700;
+}
+
+.insight-card .details small {
+  font-size: 0.75rem;
+  color: #968146;
+  margin-top: 0.5rem;
+}
+
+.insight-card .progress {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insight-card .progress svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.insight-card .progress svg circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.insight-card .progress svg circle.bg {
+  stroke: #e6e6e6;
+}
+
+.insight-card.salary .progress svg circle.value {
+  stroke: #5C8408;
+  stroke-dasharray: 226;
+  stroke-dashoffset: calc(226 - (226 * 80) / 100);
+}
+
+.insight-card.education .progress svg circle.value {
+  stroke: #FECF39;
+  stroke-dasharray: 226;
+  stroke-dashoffset: calc(226 - (226 * 14) / 100);
+}
+
+.insight-card.employment .progress svg circle.value {
+  stroke: #DDA192;
+  stroke-dasharray: 226;
+  stroke-dashoffset: calc(226 - (226 * 0.1) / 100);
+}
+
+.insight-card .progress .number {
+  position: absolute;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Timeline */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 3rem;
+    width: 100%;
+    text-align: left;
+}
+
+.tl-text {
+  text-align: center;
+  color: #F5EEE6;
+  padding: 1.75rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.timeline .timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    border-left: 1px solid #F5EEE6;
+    color: #F5EEE6;
+}
+
+.timeline .timeline-item .tl-icon {
+    position: absolute;
+    left: -27px;
+    top: 0;
+    background-color: #BF8586;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.timeline .timeline-item .tl-icon i {
+    font-size: 1.3rem;
+}
+
+.timeline .timeline-item .tl-duration {
+    padding: 0.2rem 0.6rem;
+    background-color: #A35759;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.timeline .timeline-item h5 {
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.timeline .timeline-item h5 span {
+    color: #C79E9E;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: left; 
+}
+
+.timeline .timeline-item p {
+    color: #FFF;
+}
+
+/* Footer */
+footer {
+    background-color: #A35759;
+    color: #fff;
+    text-align: center;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+footer ul { 
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-icons a {
+    background: #FBFAF7;
+    color: #7E1D22;
+    padding: 15px;
+    border-radius: 100px;
+    display: flex;
+    font-size: 25px;
+    transition: 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icons a:hover {
+    opacity: 0.75;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-menu a {
+    color: #FBFAF7;
+    transition: 0.3s ease;
+    opacity: 0.8;
+}
+
+.footer-menu a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    background-color: #914144;
+    color: #FBFBFC;
+    padding: 15px;
+    width: 100%;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+    font-weight: 575;
+}
+  </style>
+  
+  <title>2209658 Portfolio</title>
+</head>
+<body>
+<!--   navbar -->
+  <nav>
+    <a href="#" class="logo"><span>2209658</span></a>
+    
+    <ul class="links">
+      <a href="index.html">Home</a>
+      <a href="personality.html">About Me</a>
+      <a href="professional.html">My Portfolio</a>
+      <a href="personal.html">Personal Development</a>
+    </ul>
+  </nav>
+  
+<!--   professional page  -->
+  <section class="section sec2 professional" id="professional">
+<!--     header text -->
+    <div class="about-section">
+    <div class="background-text">PORTFOLIO</div>
+    <div class="about-me-text">
+        MY <span class="highlight">PROFESSION</span>
+    </div>
+</div>
+    
+    <!--   mission/vision statement -->
+  <div class="statements" id="statements">
+    <div class="statements-con">
+      <h2 class="statement-title">
+        <span> My Mission & Vision </span>
+      </h2>
+      
+      <div class="statement-perfil">
+        <div class="statement-img">
+          <img src="/Assets/me.jpg" alt="Picture of Jada Johnson" class="stat-img">
+          
+          <div class="decor red-square"></div>
+          <div class="decor black-lines"></div>
+          <div class="decor red-rect"></div>
+        </div>
+      </div>
+      <div class="statement-info">
+        <div class="mission-section">
+        <h2>MY MISSION</h2>
+        <p>To constantly broaden my knowledge and skills in computer science, to seek challenging problems, to work with other people to create fast and efficient software and systems.</p>
+    </div>
+
+    <div class="vision-section">
+        <h2>MY VISION</h2>
+        <p>To leverage the transformative power of technology to develop innovative solutions that have a meaningful impact on society.</p>
+    </div>
+      </div>
+    </div>
+  </div>
+    
+<!--     future job -->
+    <div class="professional-container">
+      <div class="left">
+        <h4>Future Job: Web Developer</h4>
+        <p>A web developer specializes in building and maintaining websites and web applications. These skilled individuals are proficient in various programming languages, such as HTML, CSS, JavaScript, and often additional languages like Python, Ruby, or PHP, depending on the specific requirements of the project. Web developers use their expertise to translate web designers' concepts into functional, interactive websites. They work on both the client side (front-end) and server side (back-end) of web development.
+
+Web developers may work for a variety of organizations, including technology companies, marketing agencies, and non-profits, or they may work independently as freelancers. Continuous learning and staying updated with the latest technologies are integral parts of a web developer's role, as the digital landscape is ever-evolving, requiring adaptability and creativity to meet the demands of modern web development.</p>
+        
+        <div class="btn-con">
+        <a href="/Assets/J. Johnson Resume.docx" class="main-btn" download>
+          <span class="btn-text">Download Resumé</span>
+          <span class="btn-icon"><i class='bxr bx-arrow-down-circle'></i></span>
+        </a>
+      </div>
+      </div>
+      
+      <div class="right">
+
+          <div class="pro-item">
+            <div class="pro-text">
+              <p class="large-text">Attention to Detail</p>
+            <p class="small-text"></br>Attention to detail is a skill every web developer should have. Faulty code can cause applications to function poorly, not function at all or become a security breach waiting to happen. In this job, paying attention to the details is vital.</p>
+            </div>
+          </div>
+      
+          <div class="pro-item">
+            <div class="pro-text">
+              <p class="large-text">Program Frameworks</p>
+            <p class="small-text"></br>In web development, programming is chock-full of common tasks that most applications must solve. For example, when you type in the URL of a website, the application must resolve that URL and perform the necessary actions to bring up that website in your browser. </p>
+            </div>
+          </div>
+  
+          <div class="pro-item">
+            <div class="pro-text">
+              <p class="large-text">Responsive Design</p>
+            <p class="small-text"></br>The widespread use of mobile devices has made responsive website design an absolute necessity. The term responsive means the website will automatically adapt itself to the size of different screens—such as computers, tablets and smart phones—and function equally well on all of them. A few of the benefits of a responsive website include improved user experience, increased mobile traffic, faster website loading times and better SEO performance. </p>
+            </div>
+          </div>
+
+          <div class="pro-item">
+            <div class="pro-text">
+              <p class="large-text">Creativity</p>
+            <p class="small-text"></br>Creativity is an important skill in nearly any occupation. In general, creativity promotes problem solving, encourages a positive work environment and helps people navigate change. Thinking outside the box may be a cliché, but the ability to throw out preconceptions and use unconventional thinking in planning, programming and problem solving is nothing to scoff at. You may find that even if the front-end design decisions are left completely to art directors and UI designers, opportunities to use creativity in the functionality of web applications are many. </p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+<h4 class="tl-text">Web Developers' Insights</h4>
+
+<!-- job insights -->
+<main class="professional-insights">
+
+  <div class="insight-card salary">
+    <div class="icon">
+      <i class='bxr bx-dollar'></i> 
+    </div>
+    <div class="details">
+      <h3>Average Pay</h3>
+      <h1>$65,300</h1>
+      <small>Based in the U.S.</small>
+    </div>
+    <div class="progress">
+      <svg>
+        <circle class="bg" cx="40" cy="40" r="36"></circle>
+        <circle class="value" cx="40" cy="40" r="36"></circle>
+      </svg>
+      <div class="number">80%</div>
+    </div>
+  </div>
+
+  <div class="insight-card education">
+    <div class="icon">
+      <i class='bxr bx-education'></i> 
+    </div>
+    <div class="details">
+      <h3>Bachelor's Degree</h3>
+      <h1>Computer Science</h1>
+      <small>Held by Web Developers</small>
+    </div>
+    <div class="progress">
+      <svg>
+        <circle class="bg" cx="40" cy="40" r="36"></circle>
+        <circle class="value" cx="40" cy="40" r="36"></circle>
+      </svg>
+      <div class="number">14%</div>
+    </div>
+  </div>
+
+  <div class="insight-card employment">
+    <div class="icon">
+      <i class='bxr bx-briefcase'></i> 
+    </div>
+    <div class="details">
+      <h3>Current Employment</h3>
+      <h1>162,900</h1>
+      <small>Of the U.S. Total Workforce</small>
+    </div>
+    <div class="progress">
+      <svg>
+        <circle class="bg" cx="40" cy="40" r="36"></circle>
+        <circle class="value" cx="40" cy="40" r="36"></circle>
+      </svg>
+      <div class="number">0.10%</div>
+    </div>
+  </div>
+</main>
+
+<!-- work timeline -->
+    <h4 class="tl-text">My Work Experience</h4>
+
+    <div class="timeline">
+      <div class="timeline-item">
+    <div class="tl-icon"><i class='bxr bx-briefcase-alt-2'></i> </div>
+    <p class="tl-duration">2023 - 2024</p>
+    <h5>Accounting Intern<span> - Grace Kennedy</span></h5>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro velit facere nobis exercitationem distinctio pariatur omnis ipsam dicta dolorem? Corrupti, reiciendis obcaecati quis porro esse voluptas itaque rerum quia alias!</p>
+  </div>
+      
+      <div class="timeline-item">
+    <div class="tl-icon"><i class='bxr bx-briefcase-alt-2'></i> </div>
+    <p class="tl-duration">2024</p>
+    <h5>Poll Clerk<span> - Electoral Office of Jamaica</span></h5>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro velit facere nobis exercitationem distinctio pariatur omnis ipsam dicta dolorem? Corrupti, reiciendis obcaecati quis porro esse voluptas itaque rerum quia alias!</p>
+  </div>
+</div>
+</section>
+
+<!--   footer section -->
+<footer>
+  <ul class="footer-icons">
+    <li><a href="https://www.instagram.com/flowjamaica/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    <li><a href="https://www.facebook.com/FlowJamaica/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <li><a href="https://x.com/FLOWJamaica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="https://www.linkedin.com/company/flow-caribbean" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="https://github.com/" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+  </ul>
+  
+  <ul class="footer-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="personality.html">About Me</a></li>
+    <li><a href="professional.html">My Portfolio</a></li>
+      <li><a href="personal.html">Personal Development</a></li>
+  </ul>
+  
+  <div class="footer-bottom">
+    <p>Copyright &copy; 2025 | Designed by Jada Johnson | All Rights Reserved</p>
+  </div>
+</footer>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
